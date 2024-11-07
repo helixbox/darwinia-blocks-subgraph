@@ -17,5 +17,7 @@ export function handleBlock(block: ethereum.Block): void {
   blockEntity.stateRoot = block.stateRoot.toHex()
   blockEntity.size = block.size
   blockEntity.unclesHash = block.unclesHash.toHex()
+  blockEntity.hash = block.hash.toHex()
+  blockEntity.baseFeePerGas = block.baseFeePerGas
   blockEntity.save()
 }
